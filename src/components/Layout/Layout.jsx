@@ -1,4 +1,5 @@
 import { useDarkMode } from '../../contexts/DarkModeContext';
+import { Footer } from '../Footer/Footer';
 import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
 import { Container, Header } from './Layout.styled';
 
@@ -12,6 +13,7 @@ export const Layout = ({ children }) => {
         <SettingsPanel />
       </Header>
       {children}
+      <Footer />
     </Container>
   );
 };
