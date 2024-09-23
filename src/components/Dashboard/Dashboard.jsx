@@ -1,3 +1,11 @@
+import { ProfileCard } from '../ProfileCard/ProfileCard';
+import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
+
 export const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <ProfileCard />
+      <SettingsPanel />
+    </div>
+  );
 };
