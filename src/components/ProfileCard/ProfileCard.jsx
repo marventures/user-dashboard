@@ -4,6 +4,25 @@ import { ProfileCardContainer, ProfileImage, ProfileInfo, ProfileField, EditButt
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import avatar from '../../assets/avatar.jpg';
 
+/**
+ * @component ProfileCard
+ * @version 1.0
+ * @copyright (c) 2024, Marvin M. Pacis
+ *
+ * The ProfileCard component displays user profile information,
+ * including name, title, email, and bio. It provides an edit mode
+ * to allow users to update their details. The component adapts its
+ * styling based on the dark mode state.
+ *
+ * Utilizes:
+ * - useDarkMode: Hook to retrieve the dark mode state from the context.
+ *
+ * @returns {JSX.Element} The rendered profile card component with
+ *                        user information and an edit button.
+ *
+ * @example
+ * <ProfileCard />
+ */
 export const ProfileCard = () => {
   const { darkMode } = useDarkMode();
   const [isEditing, setIsEditing] = useState(false);

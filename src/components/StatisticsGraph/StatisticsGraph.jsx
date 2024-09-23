@@ -4,6 +4,26 @@ import { GraphContainer, SectionTitle } from './StatisticsGraph.styled';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { statistics } from '../../lib/placeholder-data';
 
+/**
+ * @component StatisticsGraph
+ * @version 1.0
+ * @copyright (c) 2024, Marvin M. Pacis
+ *
+ * The StatisticsGraph component renders a line chart that displays
+ * user statistics such as daily logins and profile views. The chart
+ * adapts to dark mode, changing the colors of the grid and lines
+ * accordingly. It uses the Recharts library for creating responsive
+ * and interactive charts.
+ *
+ * Utilizes:
+ * - useDarkMode: Hook to retrieve the dark mode state from the context.
+ * - statistics: Placeholder data for rendering the graph.
+ *
+ * @returns {JSX.Element} The rendered statistics graph with user data.
+ *
+ * @example
+ * <StatisticsGraph />
+ */
 export const StatisticsGraph = () => {
   const { darkMode } = useDarkMode();
 

@@ -1,8 +1,30 @@
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { FooterContainer, FooterLink } from './Footer.styled';
 
+/**
+ * @component Footer
+ * @version 1.0
+ * @copyright (c) 2024, Marvin M. Pacis
+ *
+ * The Footer component renders the footer section of the webpage,
+ * displaying dynamic copyright information based on the current year
+ * and including a link to the author's GitHub profile. The component
+ * adapts its styles to support dark mode.
+ *
+ *
+ * Utilizes:
+ * - useDarkMode: Hook to retrieve the dark mode state from the context.
+ *
+ * External Links:
+ * - GitHub: https://github.com/marventures
+ *
+ * @returns {JSX.Element} The rendered footer component.
+ *
+ * @example
+ * <Footer />
+ */
 export const Footer = () => {
-  const { darkMode } = useDarkMode(); // Access darkMode from context
+  const { darkMode } = useDarkMode();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,7 +32,7 @@ export const Footer = () => {
       <p>
         © {currentYear}{' '}
         <FooterLink
-          href='https://www.linkedin.com/in/marventures/'
+          href='https://github.com/marventures'
           target='_blank'
           rel='noopener noreferrer'
           darkMode={darkMode}
