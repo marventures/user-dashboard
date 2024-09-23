@@ -5,10 +5,15 @@ export const ProfileCardContainer = styled.div`
   color: ${({ darkMode }) => (darkMode ? '#fff' : '#333')};
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
   box-shadow: ${({ darkMode }) =>
     darkMode ? '0 4px 8px rgba(0, 0, 0, 0.5)' : '0 4px 8px rgba(0, 0, 0, 0.1)'};
   transition: background-color 0.3s, color 0.3s;
+`;
+
+export const SectionTitle = styled.h3`
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
 `;
 
 export const ProfileImage = styled.img`

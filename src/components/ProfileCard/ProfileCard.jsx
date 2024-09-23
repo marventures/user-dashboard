@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // prettier-ignore
-import { ProfileCardContainer, ProfileImage, ProfileInfo, ProfileField, EditButton} from './ProfileCard.styled';
+import { ProfileCardContainer, ProfileImage, ProfileInfo, ProfileField, EditButton, SectionTitle} from './ProfileCard.styled';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import avatar from '../../assets/avatar.jpg';
 
@@ -20,6 +20,7 @@ export const ProfileCard = () => {
 
   return (
     <ProfileCardContainer darkMode={darkMode}>
+      <SectionTitle>Profile</SectionTitle>
       <ProfileImage src={avatar} alt='Profile Picture' />
       <ProfileInfo>
         <ProfileField>
