@@ -1,11 +1,14 @@
 import { ProfileCard } from '../ProfileCard/ProfileCard';
-import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
+import { ActivityList } from '../ActivityList/ActivityList';
+import { StatisticsGraph } from '../StatisticsGraph/StatisticsGraph';
+import { DashboardContainer } from './Dashboard.styled';
 
 export const Dashboard = () => {
   return (
-    <div>
+    <DashboardContainer>
       <ProfileCard />
-      <SettingsPanel />
-    </div>
+      <ActivityList />
+      <StatisticsGraph />
+    </DashboardContainer>
   );
 };
