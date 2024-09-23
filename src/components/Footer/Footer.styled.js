@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background-color: ${({ darkMode }) => (darkMode ? '#222' : '#f1f1f1')};
   color: ${({ darkMode }) => (darkMode ? '#fff' : '#333')};
   text-align: center;
   padding: 20px;
   position: relative;
   bottom: 0;
-  width: 100%;
   font-size: 14px;
 
   p {
