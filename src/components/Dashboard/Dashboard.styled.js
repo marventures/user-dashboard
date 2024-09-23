@@ -8,4 +8,12 @@ export const DashboardContainer = styled.div`
   > :nth-child(3) {
     grid-column: 1 / -1;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    > :nth-child(3) {
+      grid-column: 1;
+    }
+  }
 `;
