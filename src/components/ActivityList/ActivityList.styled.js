@@ -21,7 +21,7 @@ export const ActivityItem = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: ${({ darkMode }) => (darkMode ? '#555' : '#f8f9fa')};
+    background-color: ${({ darkMode }) => (darkMode ? '#555' : '#ced4da')};
   }
 `;
 
