@@ -8,10 +8,10 @@ export const ProfileCard = () => {
   const { darkMode } = useDarkMode();
   const [isEditing, setIsEditing] = useState(false);
   const [username, setUsername] = useState('marventures');
-  const [title, setTitle] = useState('Full Stack Developer'); // Added title state
+  const [title, setTitle] = useState('Full Stack Developer');
   const [email, setEmail] = useState('marvinpacis@email.com');
   const [bio, setBio] = useState(
-    "I'm a full stack developer. I'm eager and passionate to learn every bits and pieces happening in our modern world. Technology changes very fast and in my opinion, the only way to adapt to emerging technologies is to have a drive for continuous learning and application."
+    "I'm a full stack developer with over 3 years of experience. I'm eager and passionate to learn every bits and pieces happening in our modern world. Technology changes very fast and in my opinion, the only way to adapt to emerging technologies is to have a drive for continuous learning and application."
   );
 
   const handleEditClick = () => {
