@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 // prettier-ignore
 import { PanelContainer, ToggleContainer, ToggleLabel, DarkModeButton, Switch, Slider } from './SettingsPanel.styled';
 
-export const SettingsPanel = ({ darkMode, setDarkMode }) => {
+export const SettingsPanel = () => {
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const [emailNotifications, setEmailNotifications] = useState(true);
 
   return (
@@ -23,10 +25,7 @@ export const SettingsPanel = ({ darkMode, setDarkMode }) => {
 
       {/* Dark Mode Toggle */}
       <ToggleContainer>
-        <DarkModeButton
-          onClick={() => setDarkMode(!darkMode)}
-          darkMode={darkMode}
-        >
+        <DarkModeButton onClick={toggleDarkMode} darkMode={darkMode}>
           {darkMode ? <Moon size={24} /> : <Sun size={24} />}
         </DarkModeButton>
       </ToggleContainer>
