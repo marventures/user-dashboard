@@ -37,12 +37,17 @@ export const ProfileField = styled.div`
   input,
   textarea {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid ${({ darkMode }) => (darkMode ? '#777' : '#ccc')};
     border-radius: 5px;
     background-color: ${({ darkMode }) => (darkMode ? '#555' : '#fff')};
     color: ${({ darkMode }) => (darkMode ? '#fff' : '#333')};
     width: 100%;
     transition: background-color 0.3s, color 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: ${({ darkMode }) => (darkMode ? '#4caf50' : '#007bff')};
+    }
   }
 
   textarea {

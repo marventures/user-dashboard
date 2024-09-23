@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // prettier-ignore
-import { ProfileCardContainer, ProfileImage, ProfileInfo, ProfileField, EditButton, SectionTitle} from './ProfileCard.styled';
+import { ProfileCardContainer, ProfileImage, ProfileInfo, ProfileField, EditButton, SectionTitle } from './ProfileCard.styled';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import avatar from '../../assets/avatar.jpg';
 
@@ -23,52 +23,59 @@ export const ProfileCard = () => {
       <SectionTitle>Profile</SectionTitle>
       <ProfileImage src={avatar} alt='Profile Picture' />
       <ProfileInfo>
-        <ProfileField>
+        <ProfileField darkMode={darkMode}>
           <strong>Name:</strong>
           {isEditing ? (
             <input
               type='text'
               value={username}
               onChange={e => setUsername(e.target.value)}
+              darkMode={darkMode}
             />
           ) : (
             <span>{username}</span>
           )}
         </ProfileField>
-        <ProfileField>
+        <ProfileField darkMode={darkMode}>
           <strong>Title:</strong>
           {isEditing ? (
             <input
               type='text'
               value={title}
               onChange={e => setTitle(e.target.value)}
+              darkMode={darkMode}
             />
           ) : (
             <span>{title}</span>
           )}
         </ProfileField>
-        <ProfileField>
+        <ProfileField darkMode={darkMode}>
           <strong>Email:</strong>
           {isEditing ? (
             <input
               type='text'
               value={email}
               onChange={e => setEmail(e.target.value)}
+              darkMode={darkMode}
             />
           ) : (
             <span>{email}</span>
           )}
         </ProfileField>
-        <ProfileField>
+        <ProfileField darkMode={darkMode}>
           <strong>Bio:</strong>
           {isEditing ? (
-            <textarea value={bio} onChange={e => setBio(e.target.value)} />
+            <textarea
+              value={bio}
+              onChange={e => setBio(e.target.value)}
+              darkMode={darkMode}
+            />
           ) : (
             <span>{bio}</span>
           )}
         </ProfileField>
       </ProfileInfo>
-      <EditButton onClick={handleEditClick}>
+      <EditButton darkMode={darkMode} onClick={handleEditClick}>
         {isEditing ? 'Save Changes' : 'Edit Profile'}
       </EditButton>
     </ProfileCardContainer>
