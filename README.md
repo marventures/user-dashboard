@@ -17,7 +17,7 @@ This repository contains the frontend code for a user dashboard application. It 
 
 ## Project Overview
 
-This project is a frontend application designed to manage user authentication and display user statistics. It interacts with a backend API to provide a seamless user experience for managing profiles and activities.
+This project is a frontend application designed to manage user information and display user statistics. It provides a seamless user experience for managing profiles and activities.
 
 ### Screenshot
 
